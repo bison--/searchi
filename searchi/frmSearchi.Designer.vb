@@ -28,13 +28,14 @@ Partial Class frmSearchi
         Me.txtFound = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'cmdStart
         '
         Me.cmdStart.Location = New System.Drawing.Point(12, 68)
         Me.cmdStart.Name = "cmdStart"
-        Me.cmdStart.Size = New System.Drawing.Size(87, 40)
+        Me.cmdStart.Size = New System.Drawing.Size(294, 40)
         Me.cmdStart.TabIndex = 0
         Me.cmdStart.Text = "SEARCH"
         Me.cmdStart.UseVisualStyleBackColor = True
@@ -45,16 +46,16 @@ Partial Class frmSearchi
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txtPath.Location = New System.Drawing.Point(59, 12)
         Me.txtPath.Name = "txtPath"
-        Me.txtPath.Size = New System.Drawing.Size(211, 22)
+        Me.txtPath.Size = New System.Drawing.Size(238, 22)
         Me.txtPath.TabIndex = 1
         '
         'txtName
         '
         Me.txtName.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtName.Location = New System.Drawing.Point(141, 40)
+        Me.txtName.Location = New System.Drawing.Point(94, 40)
         Me.txtName.Name = "txtName"
-        Me.txtName.Size = New System.Drawing.Size(129, 22)
+        Me.txtName.Size = New System.Drawing.Size(126, 22)
         Me.txtName.TabIndex = 2
         '
         'txtFound
@@ -66,7 +67,7 @@ Partial Class frmSearchi
         Me.txtFound.Multiline = True
         Me.txtFound.Name = "txtFound"
         Me.txtFound.ScrollBars = System.Windows.Forms.ScrollBars.Both
-        Me.txtFound.Size = New System.Drawing.Size(267, 159)
+        Me.txtFound.Size = New System.Drawing.Size(294, 159)
         Me.txtFound.TabIndex = 3
         '
         'Label1
@@ -81,17 +82,28 @@ Partial Class frmSearchi
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(12, 40)
+        Me.Label2.Location = New System.Drawing.Point(12, 43)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(123, 17)
+        Me.Label2.Size = New System.Drawing.Size(76, 17)
         Me.Label2.TabIndex = 5
-        Me.Label2.Text = "search for (with *):"
+        Me.Label2.Text = "search for:"
+        '
+        'Label3
+        '
+        Me.Label3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(226, 43)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(82, 17)
+        Me.Label3.TabIndex = 6
+        Me.Label3.Text = "(wildcard: *)"
         '
         'frmSearchi
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(291, 285)
+        Me.ClientSize = New System.Drawing.Size(318, 285)
+        Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.txtFound)
@@ -110,5 +122,6 @@ Partial Class frmSearchi
     Friend WithEvents txtFound As System.Windows.Forms.TextBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents Label3 As System.Windows.Forms.Label
 
 End Class
